@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': PostAime(),
+                'list-group-item-danger': PostPasAime()}">
+
+     <p class="newsDate"> {{created_at | date:'short'}}</p>
+     <h1>{{postTitle}}</h1>
+     <p>{{postContent}}</p>
+      <button class="btn-success buttons" (click) ="onLoveIt()"> Love it ({{loveIts}})</button>
+      <button class="btn-danger buttons" (click) ="onDontLoveIt()">Dont Love it ({{dontloveIts}})</button>
+</li>
+
